@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.led.led" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".DeviceList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ledControl"
+            android:label="AutoMate"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Data"
+            android:label="@string/title_activity_data"
+            android:parentActivityName=".ledControl" >
+        </activity>
+        <activity
+            android:name=".Timer"
+            android:label="@string/title_activity_timer"
+            android:parentActivityName=".ledControl" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.led.led.ledControl" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ledControl" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.led.led.ledControl" />
+        </activity>
+
+        <receiver android:name=".NewAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

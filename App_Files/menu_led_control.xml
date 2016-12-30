@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.led.led.ledControl">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_secure"
+        android:title="Secure"
+        app:showAsAction="never"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/action_auto"
+        android:title="Automatic"
+        app:showAsAction="never"
+        android:orderInCategory="2"
+        />
+
+    <item
+        android:id="@+id/action_sleep"
+        android:title="Sleep"
+        app:showAsAction="never"
+        android:orderInCategory="3"
+        />
+
+    <item
+        android:id="@+id/action_data"
+        android:title="Data"
+        app:showAsAction="never"
+        android:orderInCategory="4"
+        />
+
+
+    <item
+        android:id="@+id/action_about"
+        android:title="About"
+        app:showAsAction="never"
+        android:orderInCategory="9">
+        <menu>
+            <item
+                android:id="@+id/action_codes"
+                android:title="App" />
+
+            <item
+                android:id="@+id/action_about_maker"
+                android:title="Maker" />
+        </menu>
+    </item>
+
+    <item
+        android:title="Turn off Everything"
+        android:orderInCategory="7"
+        app:showAsAction="never"
+        android:id="@+id/action_tfa"
+        />
+
+    <item
+        android:title="Turn on Everything"
+        android:orderInCategory="8"
+        app:showAsAction="never"
+        android:id="@+id/action_toa"
+        />
+
+</menu>
